@@ -31,4 +31,13 @@ public class Player : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "NPCpuzzleStarter")
+        {
+            // initiate start of puzzle
+            Debug.Log("In here....so it will work when starting puzzle");
+        }
+    }
 }

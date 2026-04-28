@@ -15,11 +15,14 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     }
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        rectTransform.position = Input.mousePosition;
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        //
+        if (transform.position.x >= 555.5 && transform.position.y >= -196)
+        {
+            gameObject.SetActive(false);
+        }
     }
     void Start()
     {

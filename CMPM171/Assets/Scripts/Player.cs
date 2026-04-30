@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         {
             // initiate start of puzzle
             Debug.Log("In here....so it will work when starting puzzle");
-            puzzleUIManager.ShowPuzzle();
+            puzzleUIManager.DragDropShowPuzzle();
         }
     }
 }

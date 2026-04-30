@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
+    public PuzzleUIManager puzzleUIManager;
+
     private Rigidbody2D rb;
     private bool isGrounded;
 
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         {
             // initiate start of puzzle
             Debug.Log("In here....so it will work when starting puzzle");
+            puzzleUIManager.ShowPuzzle();
         }
     }
 }

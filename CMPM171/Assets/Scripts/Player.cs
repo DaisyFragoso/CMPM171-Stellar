@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    public static bool dragDropDone = false;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "NPCpuzzleStarter")
+        if(collision.gameObject.tag == "NPCpuzzleStarter" && dragDropDone == false)
         {
             // initiate start of puzzle
             Debug.Log("In here....so it will work when starting puzzle");

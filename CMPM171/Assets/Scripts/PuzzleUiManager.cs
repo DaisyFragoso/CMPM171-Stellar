@@ -4,6 +4,7 @@ public class PuzzleUIManager : MonoBehaviour
 {
     public GameObject puzzleUI;
     public GameObject puzzleDragDrop;
+    public GameObject DragDropEndButton;
 
     public void ShowPuzzle()
     {
@@ -29,5 +30,7 @@ public class PuzzleUIManager : MonoBehaviour
         Debug.Log("Puzzle Complete!");
         puzzleDragDrop.SetActive(false);
         Time.timeScale = 1f;
+        DragDropEndButton.SetActive(false);
+        Player.dragDropDone = true;
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public PuzzleUIManager puzzleUIManager;
+    public GameObject endButton;
     private RectTransform rectTransform;
     public RectTransform dropZone;
     private static int coinCount = 0;
@@ -31,7 +32,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         if (coinCount == 3)
         {
             Debug.Log("You have collected all coins! You can now exit the minigame.");
-            puzzleUIManager.DragDropCompletePuzzle();
+            endButton.SetActive(true);
         }
     }
     private bool RectOverlaps(RectTransform a, RectTransform b)

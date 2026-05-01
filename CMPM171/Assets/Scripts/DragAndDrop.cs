@@ -8,6 +8,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 {
     public PuzzleUIManager puzzleUIManager;
     private RectTransform rectTransform;
+    public RectTransform dropZone;
     private static int coinCount = 0;
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -20,7 +21,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (transform.position.x >= 555.5 && transform.position.y >= -196)
+        if(RectOverlaps(rectTransform, dropZone))
         {
             gameObject.SetActive(false);
             coinCount += 1;
@@ -32,6 +33,20 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             Debug.Log("You have collected all coins! You can now exit the minigame.");
             puzzleUIManager.DragDropCompletePuzzle();
         }
+    }
+    private bool RectOverlaps(RectTransform a, RectTransform b)
+    {
+        Rect aRect = GetWorldRect(a);
+        Rect bRect = GetWorldRect(b);
+        return aRect.Overlaps(bRect);
+    }
+    private Rect GetWorldRect(RectTransform rt)
+    {
+        Vector3[] corners = new Vector3[4];
+        rt.GetWorldCorners(corners);
+        return new Rect(corners[0].x, corners[0].y,
+                        corners[2].x - corners[0].x,
+                        corners[2].y - corners[0].y);
     }
     void Start()
     {

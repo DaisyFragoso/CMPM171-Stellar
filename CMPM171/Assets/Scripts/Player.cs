@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
-    public PuzzleUIManager puzzleUIManager;
+    // public PuzzleUIManager puzzleUIManager;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -36,13 +36,4 @@ public class Player : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "NPCpuzzleStarter" && dragDropDone == false)
-        {
-            // initiate start of puzzle
-            Debug.Log("In here....so it will work when starting puzzle");
-            puzzleUIManager.DragDropShowPuzzle();
-        }
-    }
 }

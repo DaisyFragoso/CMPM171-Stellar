@@ -131,6 +131,7 @@ GameObject:
   m_Layer: 0
   m_Name: puzzleConnectingItems
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1609,7 +1610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MatchLogic
   maxPoints: 3
   pointsText: {fileID: 567671855}
-  levelCompleteUI: {fileID: 810222113}
+  levelCompleteUI: {fileID: 1581780584}
+  createdLines: []
 --- !u!1 &979484487
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,6 +4165,18 @@ MonoBehaviour:
       - m_Target: {fileID: 840454978}
         m_TargetAssemblyTypeName: PuzzleUIManager, Assembly-CSharp
         m_MethodName: CompletePuzzle3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 897666091}
+        m_TargetAssemblyTypeName: MatchLogic, Assembly-CSharp
+        m_MethodName: ClearLines
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -2,35 +2,48 @@ using UnityEngine;
 
 public class PuzzleUIManager : MonoBehaviour
 {
-    public GameObject puzzleUI;
-    public GameObject puzzleDragDrop;
-    public GameObject DragDropEndButton;
+    public GameObject puzzleUI;           // Puzzle 1
+    public GameObject puzzleDragDrop;     // Puzzle 2
+    public GameObject puzzleConnectingItems; // Puzzle 3
 
-    public void ShowPuzzle()
+    public GameObject DragDropEndButton;
+    public GameObject ConnectingItemsContinueButton;
+
+    public void ShowPuzzle1()
     {
         puzzleUI.SetActive(true);
-        Time.timeScale = 0f; // pauses game 
+        Time.timeScale = 0f;
     }
 
-    public void CompletePuzzle()
+    public void ShowPuzzle2()
     {
-        Debug.Log("Puzzle Complete!");
+        puzzleDragDrop.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void ShowPuzzle3()
+    {
+        puzzleConnectingItems.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void CompletePuzzle1()
+    {
         puzzleUI.SetActive(false);
         Time.timeScale = 1f;
     }
 
-    public void DragDropShowPuzzle()
+    public void CompletePuzzle2()
     {
-        puzzleDragDrop.SetActive(true);
-        Time.timeScale = 0f; // pauses game 
-    }
-
-    public void DragDropCompletePuzzle()
-    {
-        Debug.Log("Puzzle Complete!");
         puzzleDragDrop.SetActive(false);
         Time.timeScale = 1f;
         DragDropEndButton.SetActive(false);
-        Player.dragDropDone = true;
+    }
+
+    public void CompletePuzzle3()
+    {
+        puzzleConnectingItems.SetActive(false);
+        Time.timeScale = 1f;
+        ConnectingItemsContinueButton.SetActive(false);
     }
 }

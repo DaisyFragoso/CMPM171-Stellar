@@ -1,17 +1,47 @@
 using UnityEngine;
-
 public class NPCInteraction : MonoBehaviour
 {
     public PuzzleUIManager puzzleManager;
-
     public int puzzleIndex; // 1, 2, or 3
-
     private bool hasInteracted = false;
 
-    void OnTriggerEnter2D(Collider2D other)
+    private bool isPlayerInside = false;
+
+    void Update()
     {
-        if (hasInteracted) return;
-        if (!other.CompareTag("Player")) return;
+        if (isPlayerInside && !hasInteracted && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("PressE worked");
+            Interact();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    { 
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInside = true;
+            Debug.Log("EEEE");
+
+            // if (Input.GetKeyDown(KeyCode.E))
+            // {
+            //     Debug.Log("PressE worked");
+            //     Interact();
+            // }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInside = false;
+        }
+    }
+
+    void Interact()
+    {
+        Debug.Log("PressE worked");
 
         hasInteracted = true;
 
@@ -28,4 +58,5 @@ public class NPCInteraction : MonoBehaviour
             puzzleManager.ShowPuzzle3();
         }
     }
+
 }

@@ -9,10 +9,23 @@ public class NPCInteraction : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerInside && !hasInteracted && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInside && !hasInteracted)
         {
-            Debug.Log("PressE worked");
-            Interact();
+            if (puzzleManager.isActive == false)
+            {
+                puzzleManager.InteractTextToggle();
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("PressE worked");
+                Interact();
+            }
+        }
+
+        if (!isPlayerInside && puzzleManager.isActive == true)
+        {
+            puzzleManager.InteractTextToggle();
         }
     }
 

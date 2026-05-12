@@ -4563,6 +4563,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  respawnPoint: {x: 0, y: 0}
+  animator: {fileID: 1602176901}
 --- !u!95 &1602176901
 Animator:
   serializedVersion: 7

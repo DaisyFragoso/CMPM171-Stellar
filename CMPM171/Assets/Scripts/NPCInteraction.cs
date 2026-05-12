@@ -6,14 +6,16 @@ public class NPCInteraction : MonoBehaviour
     private bool hasInteracted = false;
 
     private bool isPlayerInside = false;
+    private bool isTextShowing = false;
 
     void Update()
     {
         if (isPlayerInside && !hasInteracted)
         {
-            if (puzzleManager.isActive == false)
+            if (!puzzleManager.isActive && !isTextShowing)
             {
                 puzzleManager.InteractTextToggle();
+                isTextShowing = true;
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -23,9 +25,10 @@ public class NPCInteraction : MonoBehaviour
             }
         }
 
-        if (!isPlayerInside && puzzleManager.isActive == true)
+        if (!isPlayerInside && isTextShowing)
         {
             puzzleManager.InteractTextToggle();
+            isTextShowing = false;
         }
     }
 

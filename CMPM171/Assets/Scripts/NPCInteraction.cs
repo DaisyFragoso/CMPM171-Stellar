@@ -21,6 +21,8 @@ public class NPCInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("PressE worked");
+                puzzleManager.InteractTextToggle();
+                isTextShowing = false;
                 Interact();
             }
         }

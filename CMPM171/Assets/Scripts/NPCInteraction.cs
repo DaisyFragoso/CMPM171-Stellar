@@ -6,13 +6,31 @@ public class NPCInteraction : MonoBehaviour
     private bool hasInteracted = false;
 
     private bool isPlayerInside = false;
+    private bool isTextShowing = false;
 
     void Update()
     {
-        if (isPlayerInside && !hasInteracted && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInside && !hasInteracted)
         {
-            Debug.Log("PressE worked");
-            Interact();
+            if (!puzzleManager.isActive && !isTextShowing)
+            {
+                puzzleManager.InteractTextToggle();
+                isTextShowing = true;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("PressE worked");
+                puzzleManager.InteractTextToggle();
+                isTextShowing = false;
+                Interact();
+            }
+        }
+
+        if (!isPlayerInside && isTextShowing)
+        {
+            puzzleManager.InteractTextToggle();
+            isTextShowing = false;
         }
     }
 

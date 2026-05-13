@@ -9,7 +9,7 @@ public class MatchLogic : MonoBehaviour
     public static MatchLogic Instance;
 
     public int maxPoints=3;
-    public Text pointsText;
+    //public Text pointsText;
     public GameObject levelCompleteUI;
     private int points=0;
 
@@ -25,7 +25,7 @@ public class MatchLogic : MonoBehaviour
     // Update is called once per frame
     void UpdatePointsText()
     {
-        pointsText.text = points + "/" + maxPoints;
+       //pointsText.text = points + "/" + maxPoints;
         if (points == maxPoints) {
             levelCompleteUI.SetActive(true);
         }

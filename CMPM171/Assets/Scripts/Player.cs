@@ -53,7 +53,18 @@ public class Player : MonoBehaviour
             Respawn();
         }
 
-        spriteRenderer.flipX = rb.linearVelocity.x < 0;
+        if (rb.linearVelocity.x == 0)
+        {
+            animator.SetFloat("Speed", 0);
+        }
+        else if (rb.linearVelocity.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (rb.linearVelocity.x < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     private void FixedUpdate()

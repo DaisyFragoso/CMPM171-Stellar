@@ -56,6 +56,25 @@ public class ConstellationLogic : MonoBehaviour
         }
     }
 
+    public void RedoPuzzle()
+    {
+        foreach (GameObject line in createdLines)
+        {
+            if (line != null)
+            {
+                Destroy(line);
+            }
+        }
+
+        createdLines.Clear();
+        playerConnections.Clear();
+
+        levelCompleteUI.SetActive(false);
+        UpdateText();
+
+        Debug.Log("Puzzle reset");
+    }
+
     void UpdateText()
     {
         pointsText.text = playerConnections.Count + "/4";

@@ -8,6 +8,7 @@ public class ConstellationLogic : MonoBehaviour
 
     public TMP_Text pointsText;
     public GameObject levelCompleteUI;
+    public GameObject levelIncorrectUI;
 
     public List<GameObject> createdLines = new List<GameObject>();
 
@@ -29,6 +30,7 @@ public class ConstellationLogic : MonoBehaviour
     void Start()
     {
         levelCompleteUI.SetActive(false);
+        levelIncorrectUI.SetActive(false);
         UpdateText();
     }
 
@@ -48,11 +50,21 @@ public class ConstellationLogic : MonoBehaviour
         if (playerConnections.SetEquals(correctConnections))
         {
             Debug.Log("Correct square!");
+            foreach (GameObject line in createdLines)
+            {
+                if (line != null)
+                {
+                    Destroy(line);
+                }
+            }
+
             levelCompleteUI.SetActive(true);
+
         }
         else
         {
             Debug.Log("not the Little Dipper");
+            // levelIncorrectUI.SetActive(true);
         }
     }
 

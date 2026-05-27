@@ -64,7 +64,7 @@ public class ConstellationLogic : MonoBehaviour
         else
         {
             Debug.Log("not the Little Dipper");
-            // levelIncorrectUI.SetActive(true);
+            levelIncorrectUI.SetActive(true);
         }
     }
 
@@ -82,6 +82,7 @@ public class ConstellationLogic : MonoBehaviour
         playerConnections.Clear();
 
         levelCompleteUI.SetActive(false);
+        levelIncorrectUI.SetActive(false);
         UpdateText();
 
         Debug.Log("Puzzle reset");

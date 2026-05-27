@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    public int extraJumpsValue = 1;
+    private int extraJumps;
     public static bool dragDropDone = false;
 
     void Start()
@@ -34,18 +36,23 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
     
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            if (isGrounded) 
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+            } 
+            else  if (extraJumps > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                extraJumps--;
+            }
         }
 
-        if (!isGrounded)
+        if (isGrounded)
         {
-            animator.SetBool("isJumping", true);
-        }
-        else
-        {
-            animator.SetBool("isJumping", false);
+            extraJumps = extraJumpsValue;
         }
 
         if (transform.position.y < -10f)
@@ -64,6 +71,15 @@ public class Player : MonoBehaviour
         else if (rb.linearVelocity.x < 0)
         {
             spriteRenderer.flipX = false;
+        }
+
+        if (rb.linearVelocity.y > 0)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 

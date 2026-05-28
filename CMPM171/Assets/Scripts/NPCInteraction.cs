@@ -75,6 +75,10 @@ public class NPCInteraction : MonoBehaviour
         {
             puzzleManager.ShowPuzzle3();
         }
+        else if (puzzleIndex == 4)
+        {
+            puzzleManager.ShowPuzzle4();
+        }
     }
 
 }

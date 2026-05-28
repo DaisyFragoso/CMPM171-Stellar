@@ -6,11 +6,14 @@ public class PuzzleUIManager : MonoBehaviour
     public GameObject puzzleUI;           // Puzzle 1
     public GameObject puzzleDragDrop;     // Puzzle 2
     public GameObject puzzleConnectingItems; // Puzzle 3
+    public GameObject puzzleConstellation; //Puzzle 4
+    public GameObject IncorrectScreenConstellation;  //puzzle 4 incorrect screen
 
     public bool isActive = false;   // UI toggle state
 
     public GameObject DragDropEndButton;
     public GameObject ConnectingItemsContinueButton;
+    public GameObject ConstellationContinueButton;
 
     public void InteractTextToggle()
     {
@@ -37,6 +40,12 @@ public class PuzzleUIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void ShowPuzzle4()
+    {
+        puzzleConstellation.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     public void CompletePuzzle1()
     {
         puzzleUI.SetActive(false);
@@ -55,5 +64,13 @@ public class PuzzleUIManager : MonoBehaviour
         puzzleConnectingItems.SetActive(false);
         Time.timeScale = 1f;
         ConnectingItemsContinueButton.SetActive(false);
+    }
+
+    public void CompletePuzzle4()
+    {
+        puzzleConstellation.SetActive(false);
+        Time.timeScale = 1f;
+        ConstellationContinueButton.SetActive(false);
+        IncorrectScreenConstellation.SetActive(false);
     }
 }

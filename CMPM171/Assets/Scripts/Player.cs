@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
 
-        if (transform.position.y < -10f)
+        if (transform.position.y < -50f)
         {
             Respawn();
         }
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        if (rb.linearVelocity.y > 0)
+        if (rb.linearVelocity.y > 0 && !isGrounded)
         {
             animator.SetBool("isJumping", true);
         }

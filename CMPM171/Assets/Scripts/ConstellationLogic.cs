@@ -13,6 +13,8 @@ public class ConstellationLogic : MonoBehaviour
     public List<GameObject> createdLines = new List<GameObject>();
 
     private HashSet<string> playerConnections = new HashSet<string>();
+        
+    private List<string> connectionHistory = new List<string>();
 
     private HashSet<string> correctConnections = new HashSet<string>()
     {
@@ -34,15 +36,52 @@ public class ConstellationLogic : MonoBehaviour
         UpdateText();
     }
 
-    public void AddConnection(int rowA, int colA, int rowB, int colB)
+    public bool AddConnection(int rowA, int colA, int rowB, int colB)
     {
         string connection = GetConnectionKey(rowA, colA, rowB, colB);
 
         if (!playerConnections.Contains(connection))
         {
             playerConnections.Add(connection);
+            connectionHistory.Add(connection);
             UpdateText();
+            return true;
         }
+        return false;
+    }
+
+    public void UndoLastLine()
+    {
+        if (createdLines.Count == 0)
+        {
+            Debug.Log("No lines to undo");
+            return;
+        }
+
+        int lastIndex = createdLines.Count - 1;
+
+        GameObject lastLine = createdLines[lastIndex];
+
+        if (lastLine != null)
+        {
+            Destroy(lastLine);
+        }
+
+        createdLines.RemoveAt(lastIndex);
+
+        if (connectionHistory.Count > 0)
+        {
+            int lastConnectionIndex = connectionHistory.Count - 1;
+            string lastConnection = connectionHistory[lastConnectionIndex];
+
+            playerConnections.Remove(lastConnection);
+            connectionHistory.RemoveAt(lastConnectionIndex);
+        }
+
+        levelIncorrectUI.SetActive(false);
+        UpdateText();
+
+        Debug.Log("Undid last line");
     }
 
     public void CheckAnswer()
@@ -80,6 +119,7 @@ public class ConstellationLogic : MonoBehaviour
 
         createdLines.Clear();
         playerConnections.Clear();
+        connectionHistory.Clear();
 
         levelCompleteUI.SetActive(false);
         levelIncorrectUI.SetActive(false);

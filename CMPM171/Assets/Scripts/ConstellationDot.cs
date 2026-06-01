@@ -47,11 +47,18 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
         {
             UpdateLine(RectTransformUtility.WorldToScreenPoint(null, hoverDot.transform.position));
 
-            ConstellationLogic.Instance.AddConnection(row, col, hoverDot.row,hoverDot.col);
+            bool added = ConstellationLogic.Instance.AddConnection(row, col, hoverDot.row, hoverDot.col);
+
+            if (!added)
+            {
+                Destroy(line);
+                ConstellationLogic.Instance.createdLines.Remove(line);
+            }
         }
         else
         {
             Destroy(line);
+            ConstellationLogic.Instance.createdLines.Remove(line);
         }
 
         hoverDot = null;

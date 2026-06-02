@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
     
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (isGrounded) 
             {
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
 
-        if (transform.position.y < -50f)
+        if (transform.position.y < -25f)
         {
             Respawn();
         }

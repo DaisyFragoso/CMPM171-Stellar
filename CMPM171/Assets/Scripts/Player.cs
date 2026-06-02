@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private int extraJumps;
     public static bool dragDropDone = false;
 
+    public GameObject controlsUI;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +60,15 @@ public class Player : MonoBehaviour
         if (transform.position.y < -25f)
         {
             Respawn();
+        }
+
+        if (transform.position.x > -4f && transform.position.x < 3f)
+        {
+            controlsUI.SetActive(true);
+        }
+        else
+        {
+            controlsUI.SetActive(false);
         }
 
         if (rb.linearVelocity.x == 0)

@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: 834795b353a0645cb95f3468a1b5de22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1146154247154039583
+    second: moveInstructSheet_0
+  - first:
+      213: -7072622388302350563
+    second: moveInstructSheet_1
+  - first:
+      213: 266597360091983167
+    second: moveInstructSheet_2
+  - first:
+      213: 6115164047923365944
+    second: moveInstructSheet_3
+  - first:
+      213: -9095423784399726100
+    second: moveInstructSheet_4
+  - first:
+      213: -7770224598365963715
+    second: moveInstructSheet_5
+  - first:
+      213: 4302070931077202551
+    second: moveInstructSheet_6
+  - first:
+      213: -7431040072170596525
+    second: moveInstructSheet_7
+  - first:
+      213: -6541814444653778789
+    second: moveInstructSheet_8
+  - first:
+      213: -3714808238899428638
+    second: moveInstructSheet_9
+  - first:
+      213: -6736056670216683833
+    second: moveInstructSheet_10
+  - first:
+      213: -8045648810756640773
+    second: moveInstructSheet_11
+  - first:
+      213: 111294359834028791
+    second: moveInstructSheet_12
+  - first:
+      213: 4108617879174935578
+    second: moveInstructSheet_13
+  - first:
+      213: 6860667013557957695
+    second: moveInstructSheet_14
+  - first:
+      213: -1507947938565387150
+    second: moveInstructSheet_15
+  - first:
+      213: 3888777212826711505
+    second: moveInstructSheet_16
+  - first:
+      213: -4585235535551951013
+    second: moveInstructSheet_17
+  - first:
+      213: 7296317356623455020
+    second: moveInstructSheet_18
+  - first:
+      213: 5788836820991753432
+    second: moveInstructSheet_19
+  - first:
+      213: 8052078928825170289
+    second: moveInstructSheet_20
+  - first:
+      213: -2988629469351830104
+    second: moveInstructSheet_21
+  - first:
+      213: -483143464788449795
+    second: moveInstructSheet_22
+  - first:
+      213: -4167140480487971812
+    second: moveInstructSheet_23
+  - first:
+      213: 3751904389799273743
+    second: moveInstructSheet_24
+  - first:
+      213: 2221957903570380187
+    second: moveInstructSheet_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: moveInstructSheet_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 47
+        width: 108
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e40498e8ca0810f0800000000000000
+      internalID: -1146154247154039583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moveInstructSheet_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 47
+        width: 108
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1773c2096ff8dd90800000000000000
+      internalID: -7072622388302350563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8ba84a610824b46f8a44e580598f68b8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      moveInstructSheet_0: -1146154247154039583
+      moveInstructSheet_1: -7072622388302350563
+      moveInstructSheet_10: -6736056670216683833
+      moveInstructSheet_11: -8045648810756640773
+      moveInstructSheet_12: 111294359834028791
+      moveInstructSheet_13: 4108617879174935578
+      moveInstructSheet_14: 6860667013557957695
+      moveInstructSheet_15: -1507947938565387150
+      moveInstructSheet_16: 3888777212826711505
+      moveInstructSheet_17: -4585235535551951013
+      moveInstructSheet_18: 7296317356623455020
+      moveInstructSheet_19: 5788836820991753432
+      moveInstructSheet_2: 266597360091983167
+      moveInstructSheet_20: 8052078928825170289
+      moveInstructSheet_21: -2988629469351830104
+      moveInstructSheet_22: -483143464788449795
+      moveInstructSheet_23: -4167140480487971812
+      moveInstructSheet_24: 3751904389799273743
+      moveInstructSheet_25: 2221957903570380187
+      moveInstructSheet_3: 6115164047923365944
+      moveInstructSheet_4: -9095423784399726100
+      moveInstructSheet_5: -7770224598365963715
+      moveInstructSheet_6: 4302070931077202551
+      moveInstructSheet_7: -7431040072170596525
+      moveInstructSheet_8: -6541814444653778789
+      moveInstructSheet_9: -3714808238899428638
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

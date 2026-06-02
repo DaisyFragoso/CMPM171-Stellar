@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: f3d175261ea704622b03bd610e030ff0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4191411669613521203
+    second: interactSheetInstruct_0
+  - first:
+      213: 6049964298561066905
+    second: interactSheetInstruct_1
+  - first:
+      213: 5639592352696480064
+    second: interactSheetInstruct_2
+  - first:
+      213: -6167904286922740676
+    second: interactSheetInstruct_3
+  - first:
+      213: 74764271954802627
+    second: interactSheetInstruct_4
+  - first:
+      213: 7999386393374199030
+    second: interactSheetInstruct_5
+  - first:
+      213: 1638372496390467729
+    second: interactSheetInstruct_6
+  - first:
+      213: 4782139972542947333
+    second: interactSheetInstruct_7
+  - first:
+      213: 8936699747252408602
+    second: interactSheetInstruct_8
+  - first:
+      213: -3719925394462765769
+    second: interactSheetInstruct_9
+  - first:
+      213: -2675782236110347464
+    second: interactSheetInstruct_10
+  - first:
+      213: 4818589803194049949
+    second: interactSheetInstruct_11
+  - first:
+      213: 2510204705054346669
+    second: interactSheetInstruct_12
+  - first:
+      213: 7743616297820897986
+    second: interactSheetInstruct_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: interactSheetInstruct_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 78
+        width: 88
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339adbad4b2ea2a30800000000000000
+      internalID: 4191411669613521203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactSheetInstruct_1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 78
+        width: 88
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9971787b97ac5f350800000000000000
+      internalID: 6049964298561066905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 740752c4711e64a7eac926e6f4fa6ead
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      interactSheetInstruct_0: 4191411669613521203
+      interactSheetInstruct_1: 6049964298561066905
+      interactSheetInstruct_10: -2675782236110347464
+      interactSheetInstruct_11: 4818589803194049949
+      interactSheetInstruct_12: 2510204705054346669
+      interactSheetInstruct_13: 7743616297820897986
+      interactSheetInstruct_2: 5639592352696480064
+      interactSheetInstruct_3: -6167904286922740676
+      interactSheetInstruct_4: 74764271954802627
+      interactSheetInstruct_5: 7999386393374199030
+      interactSheetInstruct_6: 1638372496390467729
+      interactSheetInstruct_7: 4782139972542947333
+      interactSheetInstruct_8: 8936699747252408602
+      interactSheetInstruct_9: -3719925394462765769
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

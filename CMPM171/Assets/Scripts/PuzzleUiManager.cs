@@ -12,13 +12,14 @@ public class PuzzleUIManager : MonoBehaviour
     public bool isActive = false;   // UI toggle state
 
     public GameObject DragDropEndButton;
+    public GameObject DragDropEndAnimation;
     public GameObject ConnectingItemsContinueButton;
     public GameObject ConstellationContinueButton;
 
     public void InteractTextToggle()
     {
         isActive = !isActive;
-        Debug.Log("text toggle" + isActive);
+        //Debug.Log("text toggle" + isActive);
         pressEText.SetActive(isActive);
     }
 
@@ -57,6 +58,7 @@ public class PuzzleUIManager : MonoBehaviour
         puzzleDragDrop.SetActive(false);
         Time.timeScale = 1f;
         DragDropEndButton.SetActive(false);
+        DragDropEndAnimation.SetActive(false);
     }
 
     public void CompletePuzzle3()

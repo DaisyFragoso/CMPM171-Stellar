@@ -8,6 +8,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 {
     public PuzzleUIManager puzzleUIManager;
     public GameObject endButton;
+    public GameObject endAnimation;
     private RectTransform rectTransform;
     public RectTransform dropZone;
     private static int coinCount = 0;
@@ -26,14 +27,16 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         {
             gameObject.SetActive(false);
             coinCount += 1;
-            Debug.Log("Coin collected! Current coin count: " + coinCount);
+            //Debug.Log("Coin collected! Current coin count: " + coinCount);
         }
 
         if (coinCount == 3)
         {
-            Debug.Log("You have collected all coins! You can now exit the minigame.");
+            //Debug.Log("You have collected all coins! You can now exit the minigame.");
+            endAnimation.SetActive(true);
             endButton.SetActive(true);
         }
+        
     }
     private bool RectOverlaps(RectTransform a, RectTransform b)
     {
@@ -52,5 +55,6 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        coinCount = 0;
     }
 }

@@ -54,7 +54,7 @@ public class ConstellationLogic : MonoBehaviour
     {
         if (createdLines.Count == 0)
         {
-            Debug.Log("No lines to undo");
+            //Debug.Log("No lines to undo");
             return;
         }
 
@@ -81,14 +81,14 @@ public class ConstellationLogic : MonoBehaviour
         levelIncorrectUI.SetActive(false);
         UpdateText();
 
-        Debug.Log("Undid last line");
+        //Debug.Log("Undid last line");
     }
 
     public void CheckAnswer()
     {
         if (playerConnections.SetEquals(correctConnections))
         {
-            Debug.Log("Correct square!");
+            //Debug.Log("Correct square!");
             foreach (GameObject line in createdLines)
             {
                 if (line != null)
@@ -125,7 +125,7 @@ public class ConstellationLogic : MonoBehaviour
         levelIncorrectUI.SetActive(false);
         UpdateText();
 
-        Debug.Log("Puzzle reset");
+        //Debug.Log("Puzzle reset");
     }
 
     void UpdateText()

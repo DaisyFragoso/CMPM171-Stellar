@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 76a459f9aec6e4ae7bca6cec487a355f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6261293867476430185
+    second: gainCoinsSheet_0
+  - first:
+      213: -3763761267760350455
+    second: gainCoinsSheet_1
+  - first:
+      213: 867432863882805728
+    second: gainCoinsSheet_2
+  - first:
+      213: 6994579056684232785
+    second: gainCoinsSheet_3
+  - first:
+      213: 4485280818322745218
+    second: gainCoinsSheet_4
+  - first:
+      213: -4696062992262253470
+    second: gainCoinsSheet_5
+  - first:
+      213: -5475202343365182450
+    second: gainCoinsSheet_6
+  - first:
+      213: 104367177259933010
+    second: gainCoinsSheet_7
+  - first:
+      213: -3428484950382648104
+    second: gainCoinsSheet_8
+  - first:
+      213: -2916895411275332161
+    second: gainCoinsSheet_9
+  - first:
+      213: 3097038814375798852
+    second: gainCoinsSheet_10
+  - first:
+      213: -2824856025399694449
+    second: gainCoinsSheet_11
+  - first:
+      213: -2412014216870183081
+    second: gainCoinsSheet_12
+  - first:
+      213: 4719510549176976498
+    second: gainCoinsSheet_13
+  - first:
+      213: -3636677386376121791
+    second: gainCoinsSheet_14
+  - first:
+      213: 8496628868479162314
+    second: gainCoinsSheet_15
+  - first:
+      213: -5242690523698291325
+    second: gainCoinsSheet_16
+  - first:
+      213: -4849959381058947426
+    second: gainCoinsSheet_17
+  - first:
+      213: 1003689712521564958
+    second: gainCoinsSheet_18
+  - first:
+      213: 5475485517164992116
+    second: gainCoinsSheet_19
+  - first:
+      213: -7889122061909795506
+    second: gainCoinsSheet_20
+  - first:
+      213: 6913146614810139051
+    second: gainCoinsSheet_21
+  - first:
+      213: 56724677457125193
+    second: gainCoinsSheet_22
+  - first:
+      213: -4903559752501344943
+    second: gainCoinsSheet_23
+  - first:
+      213: -6935405624637018269
+    second: gainCoinsSheet_24
+  - first:
+      213: -415217075696400573
+    second: gainCoinsSheet_25
+  - first:
+      213: 3783813313830292369
+    second: gainCoinsSheet_26
+  - first:
+      213: -7915951340258576551
+    second: gainCoinsSheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gainCoinsSheet_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 29
+        width: 168
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7925cbab66a6b19a0800000000000000
+      internalID: -6261293867476430185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gainCoinsSheet_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 29
+        width: 168
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b35c7711f64cbc0800000000000000
+      internalID: -3763761267760350455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e3e3532d009834507b73f69fc52d6e36
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gainCoinsSheet_0: -6261293867476430185
+      gainCoinsSheet_1: -3763761267760350455
+      gainCoinsSheet_10: 3097038814375798852
+      gainCoinsSheet_11: -2824856025399694449
+      gainCoinsSheet_12: -2412014216870183081
+      gainCoinsSheet_13: 4719510549176976498
+      gainCoinsSheet_14: -3636677386376121791
+      gainCoinsSheet_15: 8496628868479162314
+      gainCoinsSheet_16: -5242690523698291325
+      gainCoinsSheet_17: -4849959381058947426
+      gainCoinsSheet_18: 1003689712521564958
+      gainCoinsSheet_19: 5475485517164992116
+      gainCoinsSheet_2: 867432863882805728
+      gainCoinsSheet_20: -7889122061909795506
+      gainCoinsSheet_21: 6913146614810139051
+      gainCoinsSheet_22: 56724677457125193
+      gainCoinsSheet_23: -4903559752501344943
+      gainCoinsSheet_24: -6935405624637018269
+      gainCoinsSheet_25: -415217075696400573
+      gainCoinsSheet_26: 3783813313830292369
+      gainCoinsSheet_27: -7915951340258576551
+      gainCoinsSheet_3: 6994579056684232785
+      gainCoinsSheet_4: 4485280818322745218
+      gainCoinsSheet_5: -4696062992262253470
+      gainCoinsSheet_6: -5475202343365182450
+      gainCoinsSheet_7: 104367177259933010
+      gainCoinsSheet_8: -3428484950382648104
+      gainCoinsSheet_9: -2916895411275332161
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

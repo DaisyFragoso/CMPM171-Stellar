@@ -18,9 +18,9 @@ public class NPCInteraction : MonoBehaviour
                 isTextShowing = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("/"))
             {
-                Debug.Log("PressE worked");
+                //Debug.Log("PressE worked");
                 puzzleManager.InteractTextToggle();
                 isTextShowing = false;
                 Interact();
@@ -39,13 +39,7 @@ public class NPCInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInside = true;
-            Debug.Log("EEEE");
-
-            // if (Input.GetKeyDown(KeyCode.E))
-            // {
-            //     Debug.Log("PressE worked");
-            //     Interact();
-            // }
+            //Debug.Log("EEEE")
         }
     }
 
@@ -59,7 +53,7 @@ public class NPCInteraction : MonoBehaviour
 
     void Interact()
     {
-        Debug.Log("PressE worked");
+        //Debug.Log("PressE worked");
 
         hasInteracted = true;
 

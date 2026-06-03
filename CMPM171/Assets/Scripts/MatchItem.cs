@@ -71,20 +71,24 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
 
         RectTransform lineRect = line.GetComponent<RectTransform>();
 
-        Vector3 start = transform.position;
-        Vector3 end = screenPosition;
+        // Vector3 start = transform.position;
+        // Vector3 end = screenPosition;
 
-        // Force visual direction left → right
-        if (start.x > end.x)
-        {
-            Vector3 temp = start;
-            start = end;
-            end = temp;
-        }
+        Vector2 start, end;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, transform.position, null, out start);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPosition, null, out end);
+
+        // // Force visual direction left → right
+        // if (start.x > end.x)
+        // {
+        //     Vector3 temp = start;
+        //     start = end;
+        //     end = temp;
+        // }
 
         Vector3 direction = end - start;
 
-        lineRect.position = start;
+        lineRect.anchoredPosition = start;
         lineRect.sizeDelta = new Vector2(direction.magnitude, 8f);
         lineRect.right = direction;
     }

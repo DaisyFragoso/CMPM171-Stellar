@@ -184,7 +184,7 @@ TextureImporter:
       name: gainCoinsSheet_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 8
         y: 29
         width: 168
         height: 125
@@ -207,7 +207,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 187
-        y: 29
+        y: 31
         width: 168
         height: 125
       alignment: 0

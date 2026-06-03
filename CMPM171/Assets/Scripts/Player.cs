@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public static bool dragDropDone = false;
 
     public GameObject controlsUI;
+    public GameObject jumpUI;
 
     void Start()
     {
@@ -62,13 +63,22 @@ public class Player : MonoBehaviour
             Respawn();
         }
 
-        if (transform.position.x > -4f && transform.position.x < 3f)
+        if (transform.position.x > -117f && transform.position.x < -109f)
         {
             controlsUI.SetActive(true);
         }
         else
         {
             controlsUI.SetActive(false);
+        }
+        
+        if (transform.position.x > -101f && transform.position.x < -95f)
+        {
+            jumpUI.SetActive(true);
+        }
+        else
+        {
+            jumpUI.SetActive(false);
         }
 
         if (rb.linearVelocity.x == 0)

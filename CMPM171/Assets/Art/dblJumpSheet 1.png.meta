@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 30ef9778ff8c94a9d9125ee2f911d7c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7977506808974040419
+    second: dblJumpSheet 1_0
+  - first:
+      213: -9181390120296533139
+    second: dblJumpSheet 1_1
+  - first:
+      213: 7174330127972507309
+    second: dblJumpSheet 1_2
+  - first:
+      213: 8354274130807350152
+    second: dblJumpSheet 1_3
+  - first:
+      213: -1963663758595232386
+    second: dblJumpSheet 1_4
+  - first:
+      213: 2368956031327620310
+    second: dblJumpSheet 1_5
+  - first:
+      213: 8161292956193223930
+    second: dblJumpSheet 1_6
+  - first:
+      213: 685871678249768219
+    second: dblJumpSheet 1_7
+  - first:
+      213: -2007306109002072031
+    second: dblJumpSheet 1_8
+  - first:
+      213: -2183659641909147649
+    second: dblJumpSheet 1_9
+  - first:
+      213: 7713300034987712956
+    second: dblJumpSheet 1_10
+  - first:
+      213: 4831630836293065976
+    second: dblJumpSheet 1_11
+  - first:
+      213: -649776732541350126
+    second: dblJumpSheet 1_12
+  - first:
+      213: 4171145573221699987
+    second: dblJumpSheet 1_13
+  - first:
+      213: 8837476986729722069
+    second: dblJumpSheet 1_14
+  - first:
+      213: 416021449962947774
+    second: dblJumpSheet 1_15
+  - first:
+      213: -4206572085333330621
+    second: dblJumpSheet 1_16
+  - first:
+      213: -182078166363325282
+    second: dblJumpSheet 1_17
+  - first:
+      213: -1941510325215819153
+    second: dblJumpSheet 1_18
+  - first:
+      213: -2459392847935772062
+    second: dblJumpSheet 1_19
+  - first:
+      213: -8994593889016850843
+    second: dblJumpSheet 1_20
+  - first:
+      213: 2444100285270141945
+    second: dblJumpSheet 1_21
+  - first:
+      213: 6944844170567891994
+    second: dblJumpSheet 1_22
+  - first:
+      213: -1017873748999672613
+    second: dblJumpSheet 1_23
+  - first:
+      213: -2495103928797287973
+    second: dblJumpSheet 1_24
+  - first:
+      213: -5292698401914028251
+    second: dblJumpSheet 1_25
+  - first:
+      213: 5051980333855884556
+    second: dblJumpSheet 1_26
+  - first:
+      213: -1714013627904294470
+    second: dblJumpSheet 1_27
+  - first:
+      213: 4698020452946303217
+    second: dblJumpSheet 1_28
+  - first:
+      213: -7768266396134321405
+    second: dblJumpSheet 1_29
+  - first:
+      213: 1229022269545753653
+    second: dblJumpSheet 1_30
+  - first:
+      213: -7707670170366118599
+    second: dblJumpSheet 1_31
+  - first:
+      213: 8130898206570475850
+    second: dblJumpSheet 1_32
+  - first:
+      213: 6480502357473415695
+    second: dblJumpSheet 1_33
+  - first:
+      213: -6425354328029354971
+    second: dblJumpSheet 1_34
+  - first:
+      213: 3249604845316352495
+    second: dblJumpSheet 1_35
+  - first:
+      213: -4271995140405142490
+    second: dblJumpSheet 1_36
+  - first:
+      213: 1060199424435142344
+    second: dblJumpSheet 1_37
+  - first:
+      213: -7587578593279996851
+    second: dblJumpSheet 1_38
+  - first:
+      213: 7514603912185603911
+    second: dblJumpSheet 1_39
+  - first:
+      213: 5120804520643405808
+    second: dblJumpSheet 1_40
+  - first:
+      213: -723452333380809430
+    second: dblJumpSheet 1_41
+  - first:
+      213: -3652737277899343922
+    second: dblJumpSheet 1_42
+  - first:
+      213: 7325669369815883132
+    second: dblJumpSheet 1_43
+  - first:
+      213: 5547352501974178244
+    second: dblJumpSheet 1_44
+  - first:
+      213: -7861667571190807093
+    second: dblJumpSheet 1_45
+  - first:
+      213: 4902518254543526353
+    second: dblJumpSheet 1_46
+  - first:
+      213: -8994457662119975849
+    second: dblJumpSheet 1_47
+  - first:
+      213: -1867441833517172889
+    second: dblJumpSheet 1_48
+  - first:
+      213: 4201021868357800487
+    second: dblJumpSheet 1_49
+  - first:
+      213: 4432549578010541104
+    second: dblJumpSheet 1_50
+  - first:
+      213: -5417388560736147969
+    second: dblJumpSheet 1_51
+  - first:
+      213: 721343175019281143
+    second: dblJumpSheet 1_52
+  - first:
+      213: -5868568443441757152
+    second: dblJumpSheet 1_53
+  - first:
+      213: -8151568734676149147
+    second: dblJumpSheet 1_54
+  - first:
+      213: 1455151469405293442
+    second: dblJumpSheet 1_55
+  - first:
+      213: 5565517177206255615
+    second: dblJumpSheet 1_56
+  - first:
+      213: 5858821391664560261
+    second: dblJumpSheet 1_57
+  - first:
+      213: -5282777060242784363
+    second: dblJumpSheet 1_58
+  - first:
+      213: -8374933208289378872
+    second: dblJumpSheet 1_59
+  - first:
+      213: -9158590158801096403
+    second: dblJumpSheet 1_60
+  - first:
+      213: 3144591037594073141
+    second: dblJumpSheet 1_61
+  - first:
+      213: 1045776447868161133
+    second: dblJumpSheet 1_62
+  - first:
+      213: -7837331014067260212
+    second: dblJumpSheet 1_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dblJumpSheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 207
+        width: 92
+        height: 127
+      alignment: 9
+      pivot: {x: 0.52648455, y: 0.713946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d58261d2cc5be60800000000000000
+      internalID: 7977506808974040419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dblJumpSheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 208
+        width: 99
+        height: 123
+      alignment: 9
+      pivot: {x: 0.48012412, y: 0.7307528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63b177a456259080800000000000000
+      internalID: -9181390120296533139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dblJumpSheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 31
+        width: 96
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4736661, y: 0.73746103}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae1f2b7d37509360800000000000000
+      internalID: 7174330127972507309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dblJumpSheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 28
+        width: 100
+        height: 125
+      alignment: 9
+      pivot: {x: 0.48488495, y: 0.71925116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 883e1032f0850f370800000000000000
+      internalID: 8354274130807350152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e05adb718c9844103a97e76e4ef0341b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":3,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dblJumpSheet 1_0: 7977506808974040419
+      dblJumpSheet 1_1: -9181390120296533139
+      dblJumpSheet 1_10: 7713300034987712956
+      dblJumpSheet 1_11: 4831630836293065976
+      dblJumpSheet 1_12: -649776732541350126
+      dblJumpSheet 1_13: 4171145573221699987
+      dblJumpSheet 1_14: 8837476986729722069
+      dblJumpSheet 1_15: 416021449962947774
+      dblJumpSheet 1_16: -4206572085333330621
+      dblJumpSheet 1_17: -182078166363325282
+      dblJumpSheet 1_18: -1941510325215819153
+      dblJumpSheet 1_19: -2459392847935772062
+      dblJumpSheet 1_2: 7174330127972507309
+      dblJumpSheet 1_20: -8994593889016850843
+      dblJumpSheet 1_21: 2444100285270141945
+      dblJumpSheet 1_22: 6944844170567891994
+      dblJumpSheet 1_23: -1017873748999672613
+      dblJumpSheet 1_24: -2495103928797287973
+      dblJumpSheet 1_25: -5292698401914028251
+      dblJumpSheet 1_26: 5051980333855884556
+      dblJumpSheet 1_27: -1714013627904294470
+      dblJumpSheet 1_3: 8354274130807350152
+      dblJumpSheet 1_4: -1963663758595232386
+      dblJumpSheet 1_5: 2368956031327620310
+      dblJumpSheet 1_6: 8161292956193223930
+      dblJumpSheet 1_7: 685871678249768219
+      dblJumpSheet 1_8: -2007306109002072031
+      dblJumpSheet 1_9: -2183659641909147649
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

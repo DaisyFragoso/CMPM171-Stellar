@@ -12,6 +12,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private RectTransform rectTransform;
     public RectTransform dropZone;
     private static int coinCount = 0;
+    public AudioClip coinSound;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -27,6 +28,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         {
             gameObject.SetActive(false);
             coinCount += 1;
+            SoundFXManager.Instance.PlaySound(coinSound, transform, 1f);
             //Debug.Log("Coin collected! Current coin count: " + coinCount);
         }
 

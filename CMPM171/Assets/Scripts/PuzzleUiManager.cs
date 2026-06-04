@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleUIManager : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class PuzzleUIManager : MonoBehaviour
     public GameObject pressEText;          // prompt player to press E
     public GameObject alreadyCompletedText; // prompt player that puzzle is already completed
     public GameObject returnHomeText; // prompt player to return home
+    public GameObject goHomeText; // prompt player that they can go home
     public GameObject goalUI;           // Return Home Goal UI
     public GameObject puzzleDragDrop;     // Puzzle 2
     public GameObject puzzleConnectingItems; // Puzzle 3
@@ -39,6 +41,10 @@ public class PuzzleUIManager : MonoBehaviour
     {
         returnHomeText.SetActive(show);
     }
+    public void goHomePromptToggle(bool show)
+    {
+        goHomeText.SetActive(show);
+    }
 
     public void ShowReturnHome()
     {
@@ -67,7 +73,10 @@ public class PuzzleUIManager : MonoBehaviour
         puzzleConstellation.SetActive(true);
         Time.timeScale = 0f;
     }
-
+    public void CompleteReturnHome()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
     public void HideReturnHome()
     {
         isActive = false;

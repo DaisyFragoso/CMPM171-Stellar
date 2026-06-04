@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public static int playerCoins = 0;
     public static bool constellationCollected = false;
     public static bool clusterCollected = false;
+    public static bool returnHomeCompleted = false;
 
     void Start()
     {
@@ -46,6 +47,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Player.coinsCollected && Player.constellationCollected && Player.clusterCollected)
+        {
+            returnHomeCompleted = true;
+        }
+
         float moveInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
@@ -127,7 +133,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
 
-        if (playerCoins == 4)
+        if (playerCoins == 3)
         {
             coinsCollected = true;
         }

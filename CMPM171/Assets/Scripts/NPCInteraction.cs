@@ -9,6 +9,7 @@ public class NPCInteraction : MonoBehaviour
     private bool InteractTextShowing = false;
     private bool completedTextShowing = false;
     private bool ReturnHomeTextShowing = false;
+    private bool goHomeTextShowing = false;
     private bool IntroTextShowing = false;
     private bool introDone = false;
 
@@ -20,7 +21,12 @@ public class NPCInteraction : MonoBehaviour
             {
                 if (!puzzleManager.isActive && !InteractTextShowing && !completedTextShowing)
                 {
-                    if (puzzleIndex == 1 && !introDone)
+                    if (Player.returnHomeCompleted)
+                    {
+                        puzzleManager.goHomePromptToggle(true);
+                        goHomeTextShowing = true;
+                    }
+                    else if (puzzleIndex == 1 && !introDone)
                     {
                         puzzleManager.IntroTextToggle(true);
                         IntroTextShowing = true;
@@ -39,6 +45,12 @@ public class NPCInteraction : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("/"))
                 {
+                    if (Player.returnHomeCompleted)
+                    {
+                        puzzleManager.CompleteReturnHome();
+                        return;
+                    }
+
                     puzzleManager.IntroTextToggle(false);
                     puzzleManager.InteractTextToggle(false);
                     puzzleManager.ReturnHomeTextToggle(false);

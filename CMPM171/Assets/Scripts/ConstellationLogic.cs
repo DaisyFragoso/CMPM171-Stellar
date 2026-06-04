@@ -18,10 +18,13 @@ public class ConstellationLogic : MonoBehaviour
 
     private HashSet<string> correctConnections = new HashSet<string>()
     {
-        "3,3-3,6",
-        "3,6-6,6",
-        "6,3-6,6",
-        "3,3-6,3"
+        "2,5-3,3",
+        "2,5-3,6",
+        "3,6-4,4",
+        "3,3-4,4",
+        "4,4-5,4",
+        "5,4-6,3",
+        "6,3-7,2",
     };
 
     public AudioClip lineDrawSound;
@@ -42,15 +45,28 @@ public class ConstellationLogic : MonoBehaviour
     {
         string connection = GetConnectionKey(rowA, colA, rowB, colB);
 
-        if (!playerConnections.Contains(connection))
+        if (playerConnections.Contains(connection))
         {
-            playerConnections.Add(connection);
-            connectionHistory.Add(connection);
-            UpdateText();
-            SoundFXManager.Instance.PlaySound(lineDrawSound, transform, 1f);
-            return true;
+            Debug.Log("Already connected this line: " + connection);
+            return false;
         }
-        return false;
+
+        if (correctConnections.Contains(connection))
+        {
+            Debug.Log("correcct connection: " + connection);
+        }
+        else
+        {
+            Debug.LogWarning("We dont need this connection: " + connection);
+        }
+
+        playerConnections.Add(connection);
+        connectionHistory.Add(connection);
+        UpdateText();
+
+        SoundFXManager.Instance.PlaySound(lineDrawSound, transform, 1f);
+
+        return true;
     }
 
     public void UndoLastLine()
@@ -79,6 +95,7 @@ public class ConstellationLogic : MonoBehaviour
 
             playerConnections.Remove(lastConnection);
             connectionHistory.RemoveAt(lastConnectionIndex);
+
         }
 
         levelIncorrectUI.SetActive(false);
@@ -91,7 +108,7 @@ public class ConstellationLogic : MonoBehaviour
     {
         if (playerConnections.SetEquals(correctConnections))
         {
-            //Debug.Log("Correct square!");
+            Debug.Log("Correct constellation!");
             foreach (GameObject line in createdLines)
             {
                 if (line != null)
@@ -99,8 +116,8 @@ public class ConstellationLogic : MonoBehaviour
                     Destroy(line);
                 }
             }
-
             levelCompleteUI.SetActive(true);
+            levelIncorrectUI.SetActive(false);
 
         }
         else
@@ -133,7 +150,7 @@ public class ConstellationLogic : MonoBehaviour
 
     void UpdateText()
     {
-        pointsText.text = playerConnections.Count + "/4";
+        pointsText.text = playerConnections.Count + "/6";
     }
 
     string GetConnectionKey(int rowA, int colA, int rowB, int colB)

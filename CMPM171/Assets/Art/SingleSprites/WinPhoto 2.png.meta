@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8f193040b3987423e8a204177606b5fe
+guid: 582dd6521527f4864bf4301a91deaaae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5158294962618580581
-    second: coin 1_0
+      213: 8109788890762755805
+    second: WinPhoto 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin 1_0
+      name: WinPhoto 2_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 39
-        width: 101
-        height: 96
+        x: 0
+        y: 0
+        width: 570
+        height: 710
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b91ce62bf0e0a68b0800000000000000
-      internalID: -5158294962618580581
+      spriteID: ddeb2555702cb8070800000000000000
+      internalID: 8109788890762755805
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coin 1_0: -5158294962618580581
+      WinPhoto 2_0: 8109788890762755805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

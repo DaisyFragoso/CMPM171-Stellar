@@ -9,7 +9,11 @@ public class DotGridGenerator : MonoBehaviour
     public int rows = 9;
     public int columns = 9;
 
-    public float spacing = 60f;
+    public float spacing = 115f;
+    public float scrambleAmount = 20f;
+
+    // Same seed = same random layout every time
+    public int randomSeed = 12345;
 
     void Start()
     {
@@ -18,6 +22,8 @@ public class DotGridGenerator : MonoBehaviour
 
     void GenerateGrid()
     {
+        Random.InitState(randomSeed);
+
         for (int row = 1; row <= rows; row++)
         {
             for (int col = 1; col <= columns; col++)
@@ -26,10 +32,16 @@ public class DotGridGenerator : MonoBehaviour
 
                 RectTransform rect = dot.GetComponent<RectTransform>();
 
-                float x = (col - 5) * spacing;
-                float y = (5 - row) * spacing;
+                float centerRow = (rows + 1) / 2f;
+                float centerCol = (columns + 1) / 2f;
 
-                rect.anchoredPosition = new Vector2(x, y);
+                float x = (col - centerCol) * spacing;
+                float y = (centerRow - row) * spacing;
+
+                float randomX = Random.Range(-scrambleAmount, scrambleAmount);
+                float randomY = Random.Range(-scrambleAmount, scrambleAmount);
+
+                rect.anchoredPosition = new Vector2(x + randomX, y + randomY);
 
                 GridDot gridDot = dot.GetComponent<GridDot>();
                 gridDot.Setup(row, col, linePrefab);

@@ -11,6 +11,8 @@ public class MatchLogic : MonoBehaviour
     public int maxPoints=3;
     //public Text pointsText;
     public GameObject levelCompleteUI;
+    public GameObject collectClusterUI;
+    public GameObject puzzleUI;
     private int points=0;
 
     public List<GameObject> createdLines = new List<GameObject>();
@@ -27,7 +29,10 @@ public class MatchLogic : MonoBehaviour
     {
        //pointsText.text = points + "/" + maxPoints;
         if (points == maxPoints) {
+            puzzleUI.SetActive(false);
+            ClearLines();
             levelCompleteUI.SetActive(true);
+            collectClusterUI.SetActive(true);
         }
     }
 

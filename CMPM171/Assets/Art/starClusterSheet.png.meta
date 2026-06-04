@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: 2dbd16a0e36644634a5897aafee4995c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4576697445413468237
+    second: starClusterSheet_0
+  - first:
+      213: 6639823558463318020
+    second: starClusterSheet_1
+  - first:
+      213: -8788314790853944708
+    second: starClusterSheet_2
+  - first:
+      213: -7578192909076165805
+    second: starClusterSheet_3
+  - first:
+      213: 7584017906210869546
+    second: starClusterSheet_4
+  - first:
+      213: 8578850133367233642
+    second: starClusterSheet_5
+  - first:
+      213: -288633792989115179
+    second: starClusterSheet_6
+  - first:
+      213: -1624348540121811621
+    second: starClusterSheet_7
+  - first:
+      213: -7670833708317043153
+    second: starClusterSheet_8
+  - first:
+      213: -7649219288155591160
+    second: starClusterSheet_9
+  - first:
+      213: -2701865876071609936
+    second: starClusterSheet_10
+  - first:
+      213: -5376267261584574779
+    second: starClusterSheet_11
+  - first:
+      213: -7281419676887536444
+    second: starClusterSheet_12
+  - first:
+      213: -384575505526277443
+    second: starClusterSheet_13
+  - first:
+      213: -1722295775412130052
+    second: starClusterSheet_14
+  - first:
+      213: 2192661665820727901
+    second: starClusterSheet_15
+  - first:
+      213: 6545200661375903552
+    second: starClusterSheet_16
+  - first:
+      213: -6512143849397188358
+    second: starClusterSheet_17
+  - first:
+      213: 5035178755566013437
+    second: starClusterSheet_18
+  - first:
+      213: -9178629953739540353
+    second: starClusterSheet_19
+  - first:
+      213: -7416274392108613751
+    second: starClusterSheet_20
+  - first:
+      213: -1807331015431787261
+    second: starClusterSheet_21
+  - first:
+      213: 2576627491488194415
+    second: starClusterSheet_22
+  - first:
+      213: -5335915968691196530
+    second: starClusterSheet_23
+  - first:
+      213: 8646430728267071249
+    second: starClusterSheet_24
+  - first:
+      213: 375596738893741917
+    second: starClusterSheet_25
+  - first:
+      213: -677272155642328744
+    second: starClusterSheet_26
+  - first:
+      213: -6308082778535379640
+    second: starClusterSheet_27
+  - first:
+      213: 1876690995578411305
+    second: starClusterSheet_28
+  - first:
+      213: 743198360591185806
+    second: starClusterSheet_29
+  - first:
+      213: 4620591687627610607
+    second: starClusterSheet_30
+  - first:
+      213: 3344829881888312914
+    second: starClusterSheet_31
+  - first:
+      213: -4529880225112365033
+    second: starClusterSheet_32
+  - first:
+      213: 4439977213283953673
+    second: starClusterSheet_33
+  - first:
+      213: -3248581278610077586
+    second: starClusterSheet_34
+  - first:
+      213: 978492120023106968
+    second: starClusterSheet_35
+  - first:
+      213: 4144755416111346070
+    second: starClusterSheet_36
+  - first:
+      213: -8189277045334614956
+    second: starClusterSheet_37
+  - first:
+      213: -6003442544739372951
+    second: starClusterSheet_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: starClusterSheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 9
+        width: 151
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b741b9fbed4c70c0800000000000000
+      internalID: -4576697445413468237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starClusterSheet_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 9
+        width: 151
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa69167fae6604fbeaf01fef14997a39
+      internalID: 6639823558463318020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starClusterSheet_2
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 9
+        width: 151
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f0dd43305074591b8bf52155fd6790
+      internalID: -8788314790853944708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f941eb046634e4c6491e89131cac0dac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":540.0,"y":180.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      starClusterSheet_0: -4576697445413468237
+      starClusterSheet_1: 6639823558463318020
+      starClusterSheet_2: -8788314790853944708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

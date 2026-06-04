@@ -15,6 +15,7 @@ public class PuzzleUIManager : MonoBehaviour
     public GameObject DragDropEndAnimation;
     public GameObject ConnectingItemsContinueButton;
     public GameObject ConstellationContinueButton;
+    public GameObject collectClusterAnim;
 
     public void InteractTextToggle()
     {
@@ -66,6 +67,7 @@ public class PuzzleUIManager : MonoBehaviour
         puzzleConnectingItems.SetActive(false);
         Time.timeScale = 1f;
         ConnectingItemsContinueButton.SetActive(false);
+        collectClusterAnim.SetActive(false);
     }
 
     public void CompletePuzzle4()

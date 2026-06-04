@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class PuzzleUIManager : MonoBehaviour
 {
+    public GameObject introText;          // intro text for return home mission
     public GameObject pressEText;          // prompt player to press E
-    public GameObject puzzleUI;           // Puzzle 1
+    public GameObject alreadyCompletedText; // prompt player that puzzle is already completed
+    public GameObject returnHomeText; // prompt player to return home
+    public GameObject goalUI;           // Return Home Goal UI
     public GameObject puzzleDragDrop;     // Puzzle 2
     public GameObject puzzleConnectingItems; // Puzzle 3
     public GameObject puzzleConstellation; //Puzzle 4
@@ -17,64 +20,88 @@ public class PuzzleUIManager : MonoBehaviour
     public GameObject ConstellationContinueButton;
     public GameObject collectClusterAnim;
 
-    public void InteractTextToggle()
+    public void IntroTextToggle(bool show)
     {
-        isActive = !isActive;
-        //Debug.Log("text toggle" + isActive);
-        pressEText.SetActive(isActive);
+        introText.SetActive(show);
     }
 
-    public void ShowPuzzle1()
+    public void InteractTextToggle(bool show)
     {
-        puzzleUI.SetActive(true);
+        pressEText.SetActive(show);
+    }
+
+    public void PuzzleCompleteTextToggle(bool show)
+    {
+        alreadyCompletedText.SetActive(show);
+    }
+
+    public void ReturnHomeTextToggle(bool show)
+    {
+        returnHomeText.SetActive(show);
+    }
+
+    public void ShowReturnHome()
+    {
+        isActive = true;
+        goalUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void ShowPuzzle2()
     {
+        isActive = true;
         puzzleDragDrop.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void ShowPuzzle3()
     {
+        isActive = true;
         puzzleConnectingItems.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void ShowPuzzle4()
     {
+        isActive = true;
         puzzleConstellation.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void CompletePuzzle1()
+    public void HideReturnHome()
     {
-        puzzleUI.SetActive(false);
+        isActive = false;
+        goalUI.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void CompletePuzzle2()
     {
+        isActive = false;
         puzzleDragDrop.SetActive(false);
         Time.timeScale = 1f;
         DragDropEndButton.SetActive(false);
         DragDropEndAnimation.SetActive(false);
+        Player.playerCoins += 3;
     }
 
     public void CompletePuzzle3()
     {
+        isActive = false;
         puzzleConnectingItems.SetActive(false);
         Time.timeScale = 1f;
         ConnectingItemsContinueButton.SetActive(false);
         collectClusterAnim.SetActive(false);
+        Player.clusterCollected = true;
     }
 
     public void CompletePuzzle4()
     {
+        isActive = false;
         puzzleConstellation.SetActive(false);
         Time.timeScale = 1f;
         ConstellationContinueButton.SetActive(false);
         IncorrectScreenConstellation.SetActive(false);
+        Player.constellationCollected = true;
     }
 }

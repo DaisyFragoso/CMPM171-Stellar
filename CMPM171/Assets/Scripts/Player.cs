@@ -26,6 +26,12 @@ public class Player : MonoBehaviour
     private AudioSource walkAudioSource;
     // audio credit -- Footsteps On Dirt (Retro Style) by SilverIllusionist -- https://freesound.org/s/672065/ -- License: Attribution 4.0
 
+    // win state trackers
+    public static bool coinsCollected = false;
+    public static int playerCoins = 0;
+    public static bool constellationCollected = false;
+    public static bool clusterCollected = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,14 +56,14 @@ public class Player : MonoBehaviour
             if (isGrounded) 
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-                SoundFXManager.Instance.PlaySound(jumpSound, transform, 1f);
+                SoundFXManager.Instance.PlaySound(jumpSound, transform, 0.5f);
 
             } 
             else  if (extraJumps > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 extraJumps--;
-                SoundFXManager.Instance.PlaySound(jumpSound, transform, 1f);
+                SoundFXManager.Instance.PlaySound(jumpSound, transform, 0.5f);
             }
         }
 
@@ -119,6 +125,11 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isJumping", false);
+        }
+
+        if (playerCoins == 4)
+        {
+            coinsCollected = true;
         }
     }
 

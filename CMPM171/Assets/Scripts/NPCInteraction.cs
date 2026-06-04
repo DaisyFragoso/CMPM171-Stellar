@@ -6,31 +6,86 @@ public class NPCInteraction : MonoBehaviour
     private bool hasInteracted = false;
 
     private bool isPlayerInside = false;
-    private bool isTextShowing = false;
+    private bool InteractTextShowing = false;
+    private bool completedTextShowing = false;
+    private bool ReturnHomeTextShowing = false;
+    private bool IntroTextShowing = false;
+    private bool introDone = false;
 
     void Update()
     {
-        if (isPlayerInside && !hasInteracted)
+        if (isPlayerInside)
         {
-            if (!puzzleManager.isActive && !isTextShowing)
+            if (!hasInteracted)
             {
-                puzzleManager.InteractTextToggle();
-                isTextShowing = true;
-            }
+                if (!puzzleManager.isActive && !InteractTextShowing && !completedTextShowing)
+                {
+                    if (puzzleIndex == 1 && !introDone)
+                    {
+                        puzzleManager.IntroTextToggle(true);
+                        IntroTextShowing = true;
+                    }
+                    else if (puzzleIndex == 1 && introDone)
+                    {
+                        puzzleManager.ReturnHomeTextToggle(true);
+                        completedTextShowing = true;
+                    }
+                    else
+                    {
+                        puzzleManager.InteractTextToggle(true);
+                        InteractTextShowing = true;
+                    }
+                }
 
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("/"))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("/"))
+                {
+                    puzzleManager.IntroTextToggle(false);
+                    puzzleManager.InteractTextToggle(false);
+                    puzzleManager.ReturnHomeTextToggle(false);
+                    IntroTextShowing = false;
+                    InteractTextShowing = false;
+                    completedTextShowing = false;
+                    introDone = true;
+                    Interact();
+                }
+            }
+            else
             {
-                //Debug.Log("PressE worked");
-                puzzleManager.InteractTextToggle();
-                isTextShowing = false;
-                Interact();
+                if (!completedTextShowing)
+                {
+                    if (puzzleIndex == 1)
+                        puzzleManager.ReturnHomeTextToggle(true);
+                    else
+                        puzzleManager.PuzzleCompleteTextToggle(true);
+                    completedTextShowing = true;
+                }
             }
         }
-
-        if (!isPlayerInside && isTextShowing)
+        else
         {
-            puzzleManager.InteractTextToggle();
-            isTextShowing = false;
+            if (IntroTextShowing)
+            {
+                puzzleManager.IntroTextToggle(false);
+                IntroTextShowing = false;
+            }
+            if (InteractTextShowing)
+            {
+                puzzleManager.InteractTextToggle(false);
+                InteractTextShowing = false;
+            }
+            if (completedTextShowing)
+            {
+                if (puzzleIndex == 1)
+                    puzzleManager.ReturnHomeTextToggle(false);
+                else
+                    puzzleManager.PuzzleCompleteTextToggle(false);
+                completedTextShowing = false;
+            }
+            if (ReturnHomeTextShowing)
+            {
+                puzzleManager.ReturnHomeTextToggle(false);
+                ReturnHomeTextShowing = false;
+            }
         }
     }
 
@@ -55,22 +110,24 @@ public class NPCInteraction : MonoBehaviour
     {
         //Debug.Log("PressE worked");
 
-        hasInteracted = true;
-
         if (puzzleIndex == 1)
         {
-            puzzleManager.ShowPuzzle1();
+            puzzleManager.ReturnHomeTextToggle(false);
+            puzzleManager.ShowReturnHome();
         }
         else if (puzzleIndex == 2)
         {
+            hasInteracted = true;
             puzzleManager.ShowPuzzle2();
         }
         else if (puzzleIndex == 3)
         {
+            hasInteracted = true;
             puzzleManager.ShowPuzzle3();
         }
         else if (puzzleIndex == 4)
         {
+            hasInteracted = true;
             puzzleManager.ShowPuzzle4();
         }
     }

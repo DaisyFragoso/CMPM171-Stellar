@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     public GameObject controlsUI;
     public GameObject jumpUI;
 
+    public AudioClip jumpSound;
+    private AudioSource walkAudioSource;
+    // audio credit -- Footsteps On Dirt (Retro Style) by SilverIllusionist -- https://freesound.org/s/672065/ -- License: Attribution 4.0
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +34,8 @@ public class Player : MonoBehaviour
         respawnPoint = rb.position;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        walkAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -44,18 +50,30 @@ public class Player : MonoBehaviour
             if (isGrounded) 
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                SoundFXManager.Instance.PlaySound(jumpSound, transform, 1f);
 
             } 
             else  if (extraJumps > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 extraJumps--;
+                SoundFXManager.Instance.PlaySound(jumpSound, transform, 1f);
             }
         }
 
         if (isGrounded)
         {
             extraJumps = extraJumpsValue;
+        }
+
+        if (isGrounded && rb.linearVelocity.x != 0)
+        {
+            if (!walkAudioSource.isPlaying)
+                walkAudioSource.Play();
+        }
+        else
+        {
+            walkAudioSource.Stop();
         }
 
         if (transform.position.y < -25f)

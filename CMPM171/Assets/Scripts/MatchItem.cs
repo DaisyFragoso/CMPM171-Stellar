@@ -13,6 +13,8 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
 
     private bool matched = false;
 
+    public AudioClip lineDrawSound;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (matched) return;
@@ -49,6 +51,7 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
             MatchLogic.AddPoint();
             hoverItem.matched = true;
             
+            SoundFXManager.Instance.PlaySound(lineDrawSound, transform, 1f);
         }
         else
         {

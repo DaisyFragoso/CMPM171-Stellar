@@ -24,6 +24,8 @@ public class ConstellationLogic : MonoBehaviour
         "3,3-6,3"
     };
 
+    public AudioClip lineDrawSound;
+
     void Awake()
     {
         Instance = this;
@@ -45,6 +47,7 @@ public class ConstellationLogic : MonoBehaviour
             playerConnections.Add(connection);
             connectionHistory.Add(connection);
             UpdateText();
+            SoundFXManager.Instance.PlaySound(lineDrawSound, transform, 1f);
             return true;
         }
         return false;

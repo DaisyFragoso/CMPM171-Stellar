@@ -75,6 +75,8 @@ public class PuzzleUIManager : MonoBehaviour
     }
     public void CompleteReturnHome()
     {
+        Time.timeScale = 1f;
+        // SaveManager.SaveGame();
         SceneManager.LoadSceneAsync(2);
     }
     public void HideReturnHome()
@@ -92,6 +94,10 @@ public class PuzzleUIManager : MonoBehaviour
         DragDropEndButton.SetActive(false);
         DragDropEndAnimation.SetActive(false);
         Player.playerCoins += 3;
+
+        SaveManager.SaveNPCCompleted(2);
+        CheckReturnHomeUnlocked();
+        SaveManager.SaveGame();
     }
 
     public void CompletePuzzle3()
@@ -102,6 +108,10 @@ public class PuzzleUIManager : MonoBehaviour
         ConnectingItemsContinueButton.SetActive(false);
         collectClusterAnim.SetActive(false);
         Player.clusterCollected = true;
+
+        SaveManager.SaveNPCCompleted(3);
+        CheckReturnHomeUnlocked();
+        SaveManager.SaveGame();
     }
 
     public void CompletePuzzle4()
@@ -112,5 +122,24 @@ public class PuzzleUIManager : MonoBehaviour
         ConstellationContinueButton.SetActive(false);
         IncorrectScreenConstellation.SetActive(false);
         Player.constellationCollected = true;
+
+        SaveManager.SaveNPCCompleted(4);
+        CheckReturnHomeUnlocked();
+        SaveManager.SaveGame();
+    }
+
+    
+    public void CheckReturnHomeUnlocked()
+    {
+        if (SaveManager.IsNPCCompleted(2) &&
+            SaveManager.IsNPCCompleted(3) &&
+            SaveManager.IsNPCCompleted(4))
+        {
+            Player.returnHomeCompleted = true;
+
+            Debug.Log("All puzzles completed. Return home is unlocked!");
+
+            SaveManager.SaveGame();
+        }
     }
 }

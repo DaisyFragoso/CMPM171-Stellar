@@ -13,6 +13,16 @@ public class NPCInteraction : MonoBehaviour
     private bool IntroTextShowing = false;
     private bool introDone = false;
 
+    // private bool hasInteracted = false;
+
+    void Start()
+    {
+        if (puzzleIndex != 1)
+        {
+            hasInteracted = SaveManager.IsNPCCompleted(puzzleIndex);
+        }
+    }
+
     void Update()
     {
         if (isPlayerInside)

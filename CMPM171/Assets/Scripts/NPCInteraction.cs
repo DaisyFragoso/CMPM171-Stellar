@@ -9,7 +9,6 @@ public class NPCInteraction : MonoBehaviour
     private bool InteractTextShowing = false;
     private bool completedTextShowing = false;
     private bool ReturnHomeTextShowing = false;
-    private bool goHomeTextShowing = false;
     private bool IntroTextShowing = false;
     private bool introDone = false;
 
@@ -34,7 +33,6 @@ public class NPCInteraction : MonoBehaviour
                     if (Player.returnHomeCompleted)
                     {
                         puzzleManager.goHomePromptToggle(true);
-                        goHomeTextShowing = true;
                     }
                     else if (puzzleIndex == 1 && !introDone)
                     {

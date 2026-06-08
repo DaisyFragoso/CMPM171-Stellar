@@ -59,6 +59,7 @@ public class GridDot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
         }
         else
         {
+            SoundFXManager.Instance.PlaySound(ConstellationLogic.Instance.undoSound, transform, 1f);
             Destroy(line);
         }
 

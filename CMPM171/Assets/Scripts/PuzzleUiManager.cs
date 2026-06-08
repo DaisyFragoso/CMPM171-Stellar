@@ -19,8 +19,9 @@ public class PuzzleUIManager : MonoBehaviour
     public GameObject DragDropEndButton;
     public GameObject DragDropEndAnimation;
     public GameObject ConnectingItemsContinueButton;
-    public GameObject ConstellationContinueButton;
     public GameObject collectClusterAnim;
+    public GameObject ConstellationContinueButton;
+    public GameObject ConstellationCollectAnim;
 
     public void IntroTextToggle(bool show)
     {
@@ -75,6 +76,7 @@ public class PuzzleUIManager : MonoBehaviour
     }
     public void CompleteReturnHome()
     {
+        goHomeText.SetActive(false);
         Time.timeScale = 1f;
         // SaveManager.SaveGame();
         SceneManager.LoadSceneAsync(2);
@@ -119,9 +121,11 @@ public class PuzzleUIManager : MonoBehaviour
         isActive = false;
         puzzleConstellation.SetActive(false);
         Time.timeScale = 1f;
-        ConstellationContinueButton.SetActive(false);
         IncorrectScreenConstellation.SetActive(false);
         Player.constellationCollected = true;
+
+        ConstellationContinueButton.SetActive(false);
+        ConstellationCollectAnim.SetActive(false);
 
         SaveManager.SaveNPCCompleted(4);
         CheckReturnHomeUnlocked();

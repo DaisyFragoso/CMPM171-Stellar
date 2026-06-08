@@ -7,8 +7,12 @@ public class ConstellationLogic : MonoBehaviour
     public static ConstellationLogic Instance;
 
     public TMP_Text pointsText;
+    public GameObject levelUI;
     public GameObject levelCompleteUI;
+    public GameObject levelCompleteAnim;
     public GameObject levelIncorrectUI;
+    public AudioClip undoSound;
+    public AudioClip successSound;
 
     public List<GameObject> createdLines = new List<GameObject>();
 
@@ -48,6 +52,7 @@ public class ConstellationLogic : MonoBehaviour
         if (playerConnections.Contains(connection))
         {
             Debug.Log("Already connected this line: " + connection);
+            SoundFXManager.Instance.PlaySound(undoSound, transform, 1f);
             return false;
         }
 
@@ -83,6 +88,7 @@ public class ConstellationLogic : MonoBehaviour
 
         if (lastLine != null)
         {
+            SoundFXManager.Instance.PlaySound(undoSound, lastLine.transform, 1f);
             Destroy(lastLine);
         }
 
@@ -117,13 +123,16 @@ public class ConstellationLogic : MonoBehaviour
                 }
             }
             levelCompleteUI.SetActive(true);
+            levelCompleteAnim.SetActive(true);
             levelIncorrectUI.SetActive(false);
-
+            levelUI.SetActive(false);
+            SoundFXManager.Instance.PlaySound(successSound, transform, 1f);
         }
         else
         {
             Debug.Log("not the Little Dipper");
             levelIncorrectUI.SetActive(true);
+            SoundFXManager.Instance.PlaySound(undoSound, transform, 1f);
         }
     }
 

@@ -7,12 +7,15 @@ using UnityEngine.EventSystems;
 public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public PuzzleUIManager puzzleUIManager;
+    public GameObject levelUI;
     public GameObject endButton;
     public GameObject endAnimation;
     private RectTransform rectTransform;
     public RectTransform dropZone;
     private static int coinCount = 0;
     public AudioClip coinSound;
+    public AudioClip incorrectSound;
+    public AudioClip successSound;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -31,12 +34,18 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             SoundFXManager.Instance.PlaySound(coinSound, transform, 1f);
             //Debug.Log("Coin collected! Current coin count: " + coinCount);
         }
+        else
+        {
+            SoundFXManager.Instance.PlaySound(incorrectSound, transform, 1f);
+        }
 
         if (coinCount == 3)
         {
             //Debug.Log("You have collected all coins! You can now exit the minigame.");
+            levelUI.SetActive(false);
             endAnimation.SetActive(true);
             endButton.SetActive(true);
+            SoundFXManager.Instance.PlaySound(successSound, transform, 1f);
         }
         
     }

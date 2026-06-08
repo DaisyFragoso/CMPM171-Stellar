@@ -14,6 +14,7 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
     private bool matched = false;
 
     public AudioClip lineDrawSound;
+    public AudioClip incorrectSound;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -55,6 +56,7 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         }
         else
         {
+            SoundFXManager.Instance.PlaySound(incorrectSound, line.transform, 1f);
             Destroy(line);
         }
 

@@ -17,6 +17,8 @@ public class MatchLogic : MonoBehaviour
 
     public List<GameObject> createdLines = new List<GameObject>();
 
+    public AudioClip successSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +35,7 @@ public class MatchLogic : MonoBehaviour
             ClearLines();
             levelCompleteUI.SetActive(true);
             collectClusterUI.SetActive(true);
+            SoundFXManager.Instance.PlaySound(successSound, transform, 1f);
         }
     }
 

@@ -57,6 +57,7 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
         }
         else
         {
+            SoundFXManager.Instance.PlaySound(ConstellationLogic.Instance.undoSound, transform, 1f);
             Destroy(line);
             ConstellationLogic.Instance.createdLines.Remove(line);
         }

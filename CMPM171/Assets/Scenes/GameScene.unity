@@ -3613,7 +3613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &484959691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12704,6 +12704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   puzzleUIManager: {fileID: 840454978}
+  levelUI: {fileID: 967708415}
   endButton: {fileID: 992862550}
   endAnimation: {fileID: 967708415}
   dropZone: {fileID: 30985193}
@@ -13140,6 +13141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   puzzleUIManager: {fileID: 840454978}
+  levelUI: {fileID: 967708415}
   endButton: {fileID: 992862550}
   endAnimation: {fileID: 967708415}
   dropZone: {fileID: 30985193}
@@ -14240,6 +14242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   puzzleUIManager: {fileID: 840454978}
+  levelUI: {fileID: 967708415}
   endButton: {fileID: 992862550}
   endAnimation: {fileID: 967708415}
   dropZone: {fileID: 30985193}
@@ -16783,3 +16786,4 @@ SceneRoots:
   - {fileID: 1523580610}
   - {fileID: 634296149}
   - {fileID: 1628954702}
+  - {fileID: 1007643618}

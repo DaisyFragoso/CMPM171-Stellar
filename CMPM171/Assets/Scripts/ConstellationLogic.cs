@@ -7,7 +7,7 @@ public class ConstellationLogic : MonoBehaviour
     public static ConstellationLogic Instance;
 
     public TMP_Text pointsText;
-    public GameObject levelUI;
+    // public GameObject levelUI;
     public GameObject levelCompleteUI;
     public GameObject levelCompleteAnim;
     public GameObject levelIncorrectUI;
@@ -125,7 +125,7 @@ public class ConstellationLogic : MonoBehaviour
             levelCompleteUI.SetActive(true);
             levelCompleteAnim.SetActive(true);
             levelIncorrectUI.SetActive(false);
-            levelUI.SetActive(false);
+            // levelUI.SetActive(false);
             SoundFXManager.Instance.PlaySound(successSound, transform, 1f);
         }
         else

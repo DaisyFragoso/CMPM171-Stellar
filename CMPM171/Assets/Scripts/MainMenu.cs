@@ -18,16 +18,13 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        // Clears old save
         SaveManager.DeleteSave();
 
-        // Reset player progress
         Player.playerCoins = 0;
         Player.clusterCollected = false;
         Player.constellationCollected = false;
         Player.returnHomeCompleted = false;
 
-        // Load your game scene
         SceneManager.LoadSceneAsync(1);
     }
 
@@ -50,7 +47,7 @@ public class MainMenu : MonoBehaviour
         // 1 = GameScene
         // 2 = EndScene
         //
-        // If it saved Main Menu or EndScene by accident, load GameScene instead.
+        // condition for if it saved Main Menu or EndScene by accident, load GameScene instead
         if (savedScene != 1)
         {
             Debug.Log("Saved scene was not gameplay scene. Loading GameScene instead.");

@@ -7,6 +7,9 @@ public class PuzzleUIManager : MonoBehaviour
     public GameObject pressEText;          // prompt player to press E
     public GameObject alreadyCompletedText; // prompt player that puzzle is already completed
     public GameObject returnHomeText; // prompt player to return home
+    public GameObject check1; // checkmark for coins
+    public GameObject check2; // checkmark for constellation
+    public GameObject check3; // checkmark for cluster
     public GameObject goHomeText; // prompt player that they can go home
     public GameObject goalUI;           // Return Home Goal UI
     public GameObject puzzleDragDrop;     // Puzzle 2
@@ -52,6 +55,21 @@ public class PuzzleUIManager : MonoBehaviour
         isActive = true;
         goalUI.SetActive(true);
         Time.timeScale = 0f;
+        
+        if (Player.coinsCollected)
+        {
+            check1.SetActive(true);
+        }
+
+        if (Player.constellationCollected)
+        {
+            check2.SetActive(true);
+        }
+        
+        if (Player.clusterCollected)
+        {
+            check3.SetActive(true);
+        }
     }
 
     public void ShowPuzzle2()

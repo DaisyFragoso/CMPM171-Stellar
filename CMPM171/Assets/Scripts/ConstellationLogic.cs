@@ -11,6 +11,7 @@ public class ConstellationLogic : MonoBehaviour
     public GameObject levelCompleteUI;
     public GameObject levelCompleteAnim;
     public GameObject levelIncorrectUI;
+    public GameObject puzzleUI;
     public AudioClip undoSound;
     public AudioClip successSound;
 
@@ -125,6 +126,7 @@ public class ConstellationLogic : MonoBehaviour
             levelCompleteUI.SetActive(true);
             levelCompleteAnim.SetActive(true);
             levelIncorrectUI.SetActive(false);
+            puzzleUI.SetActive(false);
             // levelUI.SetActive(false);
             SoundFXManager.Instance.PlaySound(successSound, transform, 1f);
         }

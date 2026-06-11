@@ -142,6 +142,8 @@ public class PuzzleUIManager : MonoBehaviour
         IncorrectScreenConstellation.SetActive(false);
         Player.constellationCollected = true;
 
+        
+
         ConstellationContinueButton.SetActive(false);
         ConstellationCollectAnim.SetActive(false);
 

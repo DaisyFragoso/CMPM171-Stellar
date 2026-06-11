@@ -3688,7 +3688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &484959691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5490,10 +5490,10 @@ RectTransform:
   - {fileID: 903667969}
   - {fileID: 1297097458}
   - {fileID: 762941727}
+  - {fileID: 1462101534}
   - {fileID: 1373189367}
   - {fileID: 967708416}
   - {fileID: 992862551}
-  - {fileID: 1462101534}
   - {fileID: 299025400}
   - {fileID: 639719582}
   - {fileID: 1581780585}
@@ -14763,6 +14763,7 @@ MonoBehaviour:
   levelCompleteUI: {fileID: 2015870748}
   levelCompleteAnim: {fileID: 2053811373}
   levelIncorrectUI: {fileID: 1343561262}
+  puzzleUI: {fileID: 484959690}
   undoSound: {fileID: 8300000, guid: 10f2752f58889459b936b95936e90e45, type: 3}
   successSound: {fileID: 8300000, guid: fc103c9b9eb1f497c8590526e34338ed, type: 3}
   createdLines: []

@@ -56,17 +56,17 @@ public class PuzzleUIManager : MonoBehaviour
         goalUI.SetActive(true);
         Time.timeScale = 0f;
         
-        if (Player.coinsCollected)
+        if (Player.coinsCollected == true)
         {
             check1.SetActive(true);
         }
 
-        if (Player.constellationCollected)
+        if (Player.constellationCollected == true)
         {
             check2.SetActive(true);
         }
         
-        if (Player.clusterCollected)
+        if (Player.clusterCollected == true)
         {
             check3.SetActive(true);
         }
@@ -114,6 +114,7 @@ public class PuzzleUIManager : MonoBehaviour
         DragDropEndButton.SetActive(false);
         DragDropEndAnimation.SetActive(false);
         Player.playerCoins += 3;
+        Player.coinsCollected = true;
 
         SaveManager.SaveNPCCompleted(2);
         CheckReturnHomeUnlocked();

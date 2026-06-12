@@ -11481,7 +11481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7cde6d5b4344b1a9eea429476e649f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GreyscaleToggle
-  greyscaleMat: {fileID: 2100000, guid: 7a4954d77b4754e05a30c6aa67cdb712, type: 2}
+  globalVolume: {fileID: 0}
   slider: {fileID: 1258603339}
 --- !u!114 &1258603339
 MonoBehaviour:

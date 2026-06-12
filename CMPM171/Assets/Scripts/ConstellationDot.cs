@@ -14,6 +14,8 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
     private Canvas canvas;
     private Camera canvasCamera;
 
+    private bool isDragging = false;
+
     public void Setup(int newRow, int newCol, GameObject newLinePrefab)
     {
         row = newRow;
@@ -38,12 +40,12 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         if (line == null) return;
-        Debug.Log($"mouse screen:{eventData.position} | dot screen:{RectTransformUtility.WorldToScreenPoint(canvasCamera, transform.position)} | dot world:{transform.position}");
         UpdateLine(eventData.position);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+
         if (line == null) return;
 
         if (hoverDot != null && hoverDot != this)

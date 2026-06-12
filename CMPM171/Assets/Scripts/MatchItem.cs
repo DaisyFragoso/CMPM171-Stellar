@@ -1,7 +1,9 @@
+// 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerEnterHandler, IPointerUpHandler
+public class MatchItem : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerUpHandler
 {
     static MatchItem hoverItem;
 
@@ -10,7 +12,9 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
 
     private GameObject line;
     private RectTransform canvasRect;
-
+    private Canvas canvas;
+    private Camera canvasCamera;
+    private bool isDragging = false;
     private bool matched = false;
 
     public AudioClip lineDrawSound;
@@ -20,53 +24,50 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
     {
         if (matched) return;
 
-        Canvas canvas = GetComponentInParent<Canvas>();
+        canvas = GetComponentInParent<Canvas>();
         canvasRect = canvas.GetComponent<RectTransform>();
+        canvasCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
 
         line = Instantiate(linePrefab, canvas.transform);
         line.transform.SetAsLastSibling();
 
         MatchLogic.Instance.createdLines.Add(line);
-
-        UpdateLine(eventData.position);
+        isDragging = true;
+        UpdateLine(Input.mousePosition);
     }
 
-    public void OnDrag(PointerEventData eventData)
+    void Update()
     {
-        // if (matched || line == null) return;
-        if (matched) return;
-
-        UpdateLine(eventData.position);
+        if (isDragging && line != null)
+            UpdateLine(Input.mousePosition);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        isDragging = false;
         if (matched || line == null) return;
 
         if (hoverItem != null && hoverItem != this && itemName == hoverItem.itemName && !matched && !hoverItem.matched)
         {
-            UpdateLine(RectTransformUtility.WorldToScreenPoint(null, hoverItem.transform.position));
-
-            // Destroy(hoverItem.gameObject);
-            // Destroy(gameObject);
+            UpdateLine(RectTransformUtility.WorldToScreenPoint(canvasCamera, hoverItem.transform.position));
             MatchLogic.AddPoint();
             hoverItem.matched = true;
-            
             SoundFXManager.Instance.PlaySound(lineDrawSound, transform, 1f);
         }
         else
         {
             SoundFXManager.Instance.PlaySound(incorrectSound, line.transform, 1f);
             Destroy(line);
+            MatchLogic.Instance.createdLines.Remove(line);
         }
 
         hoverItem = null;
+        line = null;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (matched) return;
-
         hoverItem = this;
     }
 
@@ -75,26 +76,19 @@ public class MatchItem : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         if (line == null) return;
 
         RectTransform lineRect = line.GetComponent<RectTransform>();
+        Vector3 startWorld = transform.position;
 
-        // Vector3 start = transform.position;
-        // Vector3 end = screenPosition;
+        Vector3 screenPos3D = new Vector3(screenPosition.x, screenPosition.y,
+            canvasCamera.WorldToScreenPoint(startWorld).z);
+        Vector3 endWorld = canvasCamera.ScreenToWorldPoint(screenPos3D);
 
-        Vector2 start, end;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, transform.position, null, out start);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPosition, null, out end);
+        Vector3 direction = endWorld - startWorld;
+        float distance = direction.magnitude;
 
-        // // Force visual direction left → right
-        // if (start.x > end.x)
-        // {
-        //     Vector3 temp = start;
-        //     start = end;
-        //     end = temp;
-        // }
+        lineRect.position = startWorld;
+        lineRect.sizeDelta = new Vector2(distance / canvas.transform.lossyScale.x, 8f);
 
-        Vector3 direction = end - start;
-
-        lineRect.anchoredPosition = start;
-        lineRect.sizeDelta = new Vector2(direction.magnitude, 8f);
-        lineRect.right = direction;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        lineRect.rotation = Quaternion.Euler(0, 0, angle);
     }
 }

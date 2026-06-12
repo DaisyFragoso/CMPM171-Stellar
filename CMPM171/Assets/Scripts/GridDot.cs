@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GridDot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerEnterHandler, IPointerUpHandler
+public class GridDot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerUpHandler
 {
     public static GridDot hoverDot;
 
@@ -13,6 +13,9 @@ public class GridDot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
     private GameObject line;
     private RectTransform canvasRect;
+    private Canvas canvas;
+    private Camera canvasCamera;
+    private bool isDragging = false;
 
     public void Setup(int newRow, int newCol, GameObject newLinePrefab)
     {
@@ -20,50 +23,49 @@ public class GridDot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
         col = newCol;
         linePrefab = newLinePrefab;
 
-        // Starting dot is red
         if (row == 3 && col == 3)
-        {
             GetComponent<Image>().color = Color.red;
-        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Canvas canvas = GetComponentInParent<Canvas>();
+        canvas = GetComponentInParent<Canvas>();
         canvasRect = canvas.GetComponent<RectTransform>();
+        canvasCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
 
         line = Instantiate(linePrefab, canvas.transform);
         line.transform.SetAsLastSibling();
 
         ConstellationLogic.Instance.createdLines.Add(line);
-
-        UpdateLine(eventData.position);
+        isDragging = true;
+        UpdateLine(Input.mousePosition);
     }
 
-    public void OnDrag(PointerEventData eventData)
+    void Update()
     {
-        if (line == null) return;
-
-        UpdateLine(eventData.position);
+        if (isDragging && line != null)
+            UpdateLine(Input.mousePosition);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        isDragging = false;
         if (line == null) return;
 
         if (hoverDot != null && hoverDot != this)
         {
-            UpdateLine(RectTransformUtility.WorldToScreenPoint(null, hoverDot.transform.position));
-
+            UpdateLine(RectTransformUtility.WorldToScreenPoint(canvasCamera, hoverDot.transform.position));
             ConstellationLogic.Instance.AddConnection(row, col, hoverDot.row, hoverDot.col);
         }
         else
         {
             SoundFXManager.Instance.PlaySound(ConstellationLogic.Instance.undoSound, transform, 1f);
             Destroy(line);
+            ConstellationLogic.Instance.createdLines.Remove(line);
         }
 
         hoverDot = null;
+        line = null;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -76,30 +78,19 @@ public class GridDot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
         if (line == null) return;
 
         RectTransform lineRect = line.GetComponent<RectTransform>();
+        Vector3 startWorld = transform.position;
 
-        Vector2 startPos;
-        Vector2 endPos;
+        Vector3 screenPos3D = new Vector3(screenPosition.x, screenPosition.y,
+            canvasCamera.WorldToScreenPoint(startWorld).z);
+        Vector3 endWorld = canvasCamera.ScreenToWorldPoint(screenPos3D);
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvasRect,
-            RectTransformUtility.WorldToScreenPoint(null, transform.position),
-            null,
-            out startPos
-        );
+        Vector3 direction = endWorld - startWorld;
+        float distance = direction.magnitude;
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvasRect,
-            screenPosition,
-            null,
-            out endPos
-        );
-
-        Vector2 direction = endPos - startPos;
-
-        lineRect.anchoredPosition = startPos;
-        lineRect.sizeDelta = new Vector2(direction.magnitude, 8f);
+        lineRect.position = startWorld;
+        lineRect.sizeDelta = new Vector2(distance / canvas.transform.lossyScale.x, 8f);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        lineRect.localRotation = Quaternion.Euler(0, 0, angle);
+        lineRect.rotation = Quaternion.Euler(0, 0, angle);
     }
 }

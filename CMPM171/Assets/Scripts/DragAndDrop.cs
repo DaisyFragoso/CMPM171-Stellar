@@ -19,18 +19,19 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //
+        
     }
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.position = Input.mousePosition;
+        rectTransform.anchoredPosition += eventData.delta / GetComponentInParent<Canvas>().scaleFactor;
+
     }
     public void OnEndDrag(PointerEventData eventData)
     {
         if(RectOverlaps(rectTransform, dropZone))
         {
-            gameObject.SetActive(false);
             coinCount += 1;
+            gameObject.SetActive(false);
             SoundFXManager.Instance.PlaySound(coinSound, transform, 1f);
             //Debug.Log("Coin collected! Current coin count: " + coinCount);
         }

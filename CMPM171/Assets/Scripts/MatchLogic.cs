@@ -23,6 +23,7 @@ public class MatchLogic : MonoBehaviour
     void Start()
     {
         Instance = this;
+        points = 0;
         UpdatePointsText();
     }
 

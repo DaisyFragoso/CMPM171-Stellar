@@ -11,6 +11,8 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     private GameObject line;
     private RectTransform canvasRect;
+    private Canvas canvas;
+    private Camera canvasCamera;
 
     public void Setup(int newRow, int newCol, GameObject newLinePrefab)
     {
@@ -21,8 +23,9 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Canvas canvas = GetComponentInParent<Canvas>();
+        canvas = GetComponentInParent<Canvas>();
         canvasRect = canvas.GetComponent<RectTransform>();
+        canvasCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
 
         line = Instantiate(linePrefab, canvas.transform);
         line.transform.SetAsLastSibling();
@@ -35,7 +38,7 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         if (line == null) return;
-
+        Debug.Log($"mouse screen:{eventData.position} | dot screen:{RectTransformUtility.WorldToScreenPoint(canvasCamera, transform.position)} | dot world:{transform.position}");
         UpdateLine(eventData.position);
     }
 
@@ -45,7 +48,7 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
 
         if (hoverDot != null && hoverDot != this)
         {
-            UpdateLine(RectTransformUtility.WorldToScreenPoint(null, hoverDot.transform.position));
+            UpdateLine(RectTransformUtility.WorldToScreenPoint(canvasCamera, hoverDot.transform.position));
 
             bool added = ConstellationLogic.Instance.AddConnection(row, col, hoverDot.row, hoverDot.col);
 
@@ -81,17 +84,25 @@ public class ConstellationDot : MonoBehaviour, IPointerDownHandler, IDragHandler
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             canvasRect,
-            RectTransformUtility.WorldToScreenPoint(null, transform.position),
-            null,
+            RectTransformUtility.WorldToScreenPoint(canvasCamera, transform.position),
+            canvasCamera,
             out startPos
         );
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             canvasRect,
             screenPosition,
-            null,
+            canvasCamera,
             out endPos
         );
+
+        // Correct for canvas scaler offset
+        float scaleFactor = canvas.scaleFactor;
+        Vector2 correction = new Vector2(
+            canvasRect.rect.width * 0.5f - (Screen.width * 0.5f / scaleFactor),
+            canvasRect.rect.height * 0.5f - (Screen.height * 0.5f / scaleFactor)
+        );
+        endPos -= correction;
 
         Vector2 direction = endPos - startPos;
 
